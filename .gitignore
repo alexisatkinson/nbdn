@@ -1,5 +1,6 @@
 obj
 bin
+Properties
 *.chm
 _ReSharper.*
 *.csproj.user
