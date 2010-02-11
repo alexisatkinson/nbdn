@@ -6,13 +6,19 @@ namespace nothinbutdotnetstore.tests
 {
     public class MessageGeneratorSpecs
     {
-        public abstract class concern : observations_for_a_sut_without_a_contract<MessageGenerator> {}
+        public abstract class concern : observations_for_a_sut_without_a_contract<MessageGenerator>
+        {
+        }
 
         [Concern(typeof (MessageGenerator))]
         public class when_a_message_is_sent : concern
         {
             static string result;
 
+            context c = () =>
+            {
+                
+            };
             because b = () =>
             {
                 result = sut.say_back_message("blah");
