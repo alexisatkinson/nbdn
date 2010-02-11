@@ -41,13 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="web\core\Command.cs" />
+    <Compile Include="domain\Department.cs" />
+    <Compile Include="domain\Repository.cs" />
+    <Compile Include="domain\stubs\StubRepository.cs" />
+    <Compile Include="web\application\ViewMainDepartments.cs" />
+    <Compile Include="web\core\ApplicationCommand.cs" />
+    <Compile Include="web\core\DefaultRoutedCommand.cs" />
+    <Compile Include="web\core\RawHandler.cs" />
+    <Compile Include="web\core\ReponseEngine.cs" />
+    <Compile Include="web\core\RequestFactory.cs" />
+    <Compile Include="web\core\RoutedCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\FrontController.cs" />
-    <Compile Include="web\core\MissingCommandForRequest.cs" />
+    <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

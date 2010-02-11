@@ -15,14 +15,14 @@ namespace nothinbutdotnetstore.tests.web
         {
             context c = () =>
             {
-                commands = new List<Command>();
+                commands = new List<RoutedCommand>();
                 request = an<Request>();
-                provide_a_basic_sut_constructor_argument<IEnumerable<Command>>(commands);
+                provide_a_basic_sut_constructor_argument<IEnumerable<RoutedCommand>>(commands);
             };
 
-            protected static List<Command> commands;
+            protected static List<RoutedCommand> commands;
             protected static Request request;
-            protected static Command result;
+            protected static RoutedCommand result;
         }
 
         [Concern(typeof (DefaultCommandRegistry))]
@@ -30,12 +30,12 @@ namespace nothinbutdotnetstore.tests.web
         {
             context c = () =>
             {
-                command_that_can_handle_the_request = an<Command>();
+                routed_command_that_can_handle_the_request = an<RoutedCommand>();
 
-                commands.Add(an<Command>());
-                commands.Add(command_that_can_handle_the_request);
+                commands.Add(an<RoutedCommand>());
+                commands.Add(routed_command_that_can_handle_the_request);
 
-                command_that_can_handle_the_request.Stub(x => x.can_handle(request)).Return(true);
+                routed_command_that_can_handle_the_request.Stub(x => x.can_handle(request)).Return(true);
             };
 
             because b = () =>
@@ -46,11 +46,11 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_return_the_command_that_can_do_the_processing = () =>
             {
-                result.should_be_equal_to(command_that_can_handle_the_request);
+                result.should_be_equal_to(routed_command_that_can_handle_the_request);
             };
 
 
-            static Command command_that_can_handle_the_request;
+            static RoutedCommand routed_command_that_can_handle_the_request;
         }
 
         [Concern(typeof (DefaultCommandRegistry))]
@@ -58,7 +58,7 @@ namespace nothinbutdotnetstore.tests.web
         {
             context c = () =>
             {
-                Enumerable.Range(1,100).each(x => commands.Add(an<Command>()));
+                Enumerable.Range(1,100).each(x => commands.Add(an<RoutedCommand>()));
             };
 
             because b = () =>
@@ -69,7 +69,7 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_return_the_command_that_can_do_the_processing = () =>
             {
-                result.should_be_an_instance_of<MissingCommandForRequest>();
+                result.should_be_an_instance_of<MissingRoutedCommandForRequest>();
             };
 
 

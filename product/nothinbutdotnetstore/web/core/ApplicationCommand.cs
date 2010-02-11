@@ -1,8 +1,7 @@
 namespace nothinbutdotnetstore.web.core
 {
-    public interface Command 
+    public interface ApplicationCommand 
     {
         void process(Request request);
-        bool can_handle(Request request);
     }
 }

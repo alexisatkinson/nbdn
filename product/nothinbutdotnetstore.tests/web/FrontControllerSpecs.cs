@@ -3,6 +3,7 @@ using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdd.mocking.rhino;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetstore.web.core;
+using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
 {
@@ -19,8 +20,10 @@ namespace nothinbutdotnetstore.tests.web
             context c = () =>
             {
                 request = an<Request>();
-                command = an<Command>();
+                routed_command = an<RoutedCommand>();
                 command_registry = the_dependency<CommandRegistry>();
+
+                command_registry.Stub(x => x.get_command_that_can_process_the_request(request)).Return(routed_command);
             };
 
             because b = () =>
@@ -29,20 +32,19 @@ namespace nothinbutdotnetstore.tests.web
             };
 
 
-            it should_tell_the_factory_to_create_the_command_that_can_handle_the_request = () =>
+            it should_use_the_registry_to_get_the_command_that_can_handle_the_request = () =>
             {
-                command_registry.received(x => x.get_command_that_can_process_the_request(request));
             };
 
             it should_tell_the_command_to_process_the_request = () =>
             {
-                command.received(x => x.process(request));
+                routed_command.received(x => x.process(request));
             };
 
 
             static Request request;
             static CommandRegistry command_registry;
-            static Command command;
+            static RoutedCommand routed_command;
         }
     }
 }

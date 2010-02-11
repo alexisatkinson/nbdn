@@ -2,7 +2,7 @@ using System;
 
 namespace nothinbutdotnetstore.web.core
 {
-    public class MissingCommandForRequest : Command
+    public class MissingRoutedCommandForRequest : RoutedCommand
     {
         public void process(Request request)
         {
