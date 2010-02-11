@@ -3,7 +3,6 @@ using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdd.mocking.rhino;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetstore.web.core;
-using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
 {
@@ -22,8 +21,6 @@ namespace nothinbutdotnetstore.tests.web
                 request = an<Request>();
                 command = an<Command>();
                 command_registry = the_dependency<CommandRegistry>();
-
-                command_registry.Stub(x => x.get_command_that_can_process(request)).Return(command);
             };
 
             because b = () =>
@@ -34,7 +31,7 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_tell_the_factory_to_create_the_command_that_can_handle_the_request = () =>
             {
-                command_registry.received(x => x.get_command_that_can_process(request));
+                command_registry.received(x => x.get_command_that_can_process_the_request());
             };
 
             it should_tell_the_command_to_process_the_request = () =>

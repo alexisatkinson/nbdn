@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void handle(Request request)
         {
-            command_registry.get_command_that_can_process(request).process(request);
+            command_registry.get_command_that_can_process_the_request().process(request);
         }
     }
 }
