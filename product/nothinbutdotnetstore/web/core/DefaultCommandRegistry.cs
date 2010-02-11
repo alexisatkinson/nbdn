@@ -1,5 +1,3 @@
-using System;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandRegistry : CommandRegistry

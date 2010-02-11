@@ -34,5 +34,23 @@ namespace nothinbutdotnetstore.tests.web
             static Request request;
             static Command command;
         }
+
+        [Concern(typeof (DefaultCommandRegistry))]
+        public class when_attempting_to_get_a_command_for_a_request_that_cannot_be_handled : concern
+        {
+            context c = () =>
+            {
+            };
+
+            because b = () =>
+            {
+            };
+
+
+            it name_it = () =>
+            {
+            };
+
+        }
     }
 }
