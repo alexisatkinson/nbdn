@@ -15,8 +15,8 @@ _ReSharper.*
 *.sql
 *.swp
 *.swo
-web.config
-Web.config
+product/nothinbutdotnetstore.web.ui/web.config
+*Web.config
 local_properties.rb
 product/docs/Help/*.*
 artifacts
