@@ -19,21 +19,25 @@ namespace nothinbutdotnetstore.tests.web
          {
              context c = () =>
              {
-            
+                 request = an<Request>();            
              };
 
              because b = () =>
              {
-        
+                 command = sut.get_command_that_can_process(request);
              };
 
         
              it should_return_the_command_that_can_do_the_processing = () =>
              {
-                 
+                 command.should_not_be_null();
             
             
              };
+
+             static Request request;
+             static CommandRegistry command_registry;
+             static Command command;
          }
      }
  }
