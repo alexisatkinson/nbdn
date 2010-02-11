@@ -73,6 +73,8 @@
     <Compile Include="StringWriter.cs" />
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
+    <Compile Include="web\CommandSpec.cs" />
+    <Compile Include="web\DefaultCommand.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
