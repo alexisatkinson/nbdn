@@ -12,27 +12,51 @@ namespace nothinbutdotnetstore.tests.web
         {
         }
 
+<<<<<<< HEAD
         [Concern(typeof (DefaultCommandRegistry))]
         public class when_getting_a_command_that_can_process_a_request_and_it_has_the_command : concern
         {
             context c = () =>
             {
-                request = an<Request>();
             };
 
             because b = () =>
             {
-                command = sut.get_command_that_can_process(request);
             };
 
 
             it should_return_the_command_that_can_do_the_processing = () =>
             {
-                command.should_not_be_null();
             };
-
-            static Request request;
-            static Command command;
         }
     }
 }
+=======
+         [Concern(typeof(DefaultCommandRegistry))]
+         public class when_getting_a_command_that_can_process_a_request_and_it_has_the_command : concern
+         {
+             context c = () =>
+             {
+                 request = an<Request>();            
+             };
+
+             because b = () =>
+             {
+                 command = sut.get_command_that_can_process(request);
+             };
+
+        
+             it should_return_the_command_that_can_do_the_processing = () =>
+             {
+                 command.should_not_be_null();
+            
+            
+             };
+
+             static Request request;
+             static CommandRegistry command_registry;
+             static Command command;
+         }
+     }
+ }
+>>>>>>> 9dcfe5bcc693b9261c9282cdcddeac808d9d7f79
