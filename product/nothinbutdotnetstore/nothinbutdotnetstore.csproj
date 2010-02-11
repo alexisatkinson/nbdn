@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="web\core\Command.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\DefaultCommand.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\FrontController.cs" />

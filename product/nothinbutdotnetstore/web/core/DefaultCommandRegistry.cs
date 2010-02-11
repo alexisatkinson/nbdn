@@ -6,7 +6,7 @@ namespace nothinbutdotnetstore.web.core
     {
         public Command get_command_that_can_process(Request request)
         {
-            throw new NotImplementedException();
+            return new DefaultCommand();
         }
     }
 }
