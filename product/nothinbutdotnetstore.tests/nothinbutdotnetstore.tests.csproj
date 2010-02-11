@@ -75,9 +75,12 @@
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
+    <Compile Include="web\RequestFactorySpecs.cs" />
     <Compile Include="web\RoutedCommandSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\ViewMainDepartmentsSpecs.cs" />
+    <Compile Include="web\ViewProductsSpec.cs" />
+    <Compile Include="web\ViewSubDepartmentSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">

@@ -42,10 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\Department.cs" />
+    <Compile Include="domain\Product.cs" />
     <Compile Include="domain\Repository.cs" />
     <Compile Include="domain\stubs\StubRepository.cs" />
+    <Compile Include="domain\Subdepartment.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
+    <Compile Include="web\application\ViewProducts.cs" />
+    <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
+    <Compile Include="web\core\DefaultRequest.cs" />
+    <Compile Include="web\core\DefaultRequestFactory.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\ReponseEngine.cs" />
@@ -57,7 +63,6 @@
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
-    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

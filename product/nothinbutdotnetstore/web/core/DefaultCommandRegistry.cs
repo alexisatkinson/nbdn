@@ -7,6 +7,9 @@ namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
+        //static DepartmentRequest departmentRequest = new DepartmentRequest();
+        //static SubDepartmentRequest subDepartmentRequest = new SubDepartmentRequest();
+
         IEnumerable<RoutedCommand> commands;
 
         public DefaultCommandRegistry():this(create_basic_set())
@@ -15,7 +18,14 @@ namespace nothinbutdotnetstore.web.core
 
         static IEnumerable<RoutedCommand> create_basic_set()
         {
-            yield return new DefaultRoutedCommand(x => true, new ViewMainDepartments());
+            //yield return (new DefaultRoutedCommand(x => departmentRequest.GetType().Equals(x.GetType()), new ViewMainDepartments()));
+            //yield return (new DefaultRoutedCommand(x => subDepartmentRequest.GetType().Equals(x.GetType()), new ViewSubDepartments()));
+            return null;
+        }
+
+        static IEnumerable<RoutedCommand> generate_commands()
+        {
+            throw new NotImplementedException();
         }
 
         public DefaultCommandRegistry(IEnumerable<RoutedCommand> commands)
