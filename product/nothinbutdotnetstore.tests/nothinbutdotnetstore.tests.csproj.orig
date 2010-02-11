@@ -70,7 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorSpecs.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="StringWriter.cs" />
+>>>>>>> dev
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />

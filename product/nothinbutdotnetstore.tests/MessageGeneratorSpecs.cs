@@ -15,6 +15,10 @@ namespace nothinbutdotnetstore.tests
         {
             static string result;
 
+            context c = () =>
+            {
+                
+            };
             because b = () =>
             {
                 result = sut.say_back_message("blah");
