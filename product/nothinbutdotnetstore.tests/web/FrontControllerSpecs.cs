@@ -2,7 +2,7 @@ using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdd.mocking.rhino;
 using developwithpassion.bdddoc.core;
-using nothinbutdotnetstore.web;
+using nothinbutdotnetstore.web.core;
 using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web

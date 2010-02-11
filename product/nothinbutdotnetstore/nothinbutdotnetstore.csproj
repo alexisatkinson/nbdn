@@ -41,13 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageGenerator.cs" />
-    <Compile Include="web\Command.cs" />
-    <Compile Include="web\CommandRegistry.cs" />
-    <Compile Include="web\DefaultCommandRegistry.cs" />
-    <Compile Include="web\DefaultFrontController.cs" />
-    <Compile Include="web\FrontController.cs" />
-    <Compile Include="web\Request.cs" />
+    <Compile Include="web\core\Command.cs" />
+    <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\DefaultCommandRegistry.cs" />
+    <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\Request.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

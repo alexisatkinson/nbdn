@@ -1,6 +1,6 @@
 using System;
 
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
