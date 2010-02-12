@@ -15,6 +15,7 @@ _ReSharper.*
 *.sql
 *.swp
 *.swo
+*.orig
 product/nothinbutdotnetstore.web.ui/web.config
 *Web.config
 local_properties.rb
