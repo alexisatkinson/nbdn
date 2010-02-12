@@ -2,7 +2,7 @@
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
-    public class StubResponseEngine : ReponseEngine
+    public class StubResponseEngine : ResponseEngine
     {
         public void handle<Item>(Item item)
         {

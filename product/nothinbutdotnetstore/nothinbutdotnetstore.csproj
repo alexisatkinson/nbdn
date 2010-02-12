@@ -66,10 +66,14 @@
     <Compile Include="web\application\ViewProducts.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
+    <Compile Include="web\core\DefaultCommand.cs" />
+    <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
+    <Compile Include="web\core\DefaultRouteHandler.cs" />
+    <Compile Include="web\core\HttpHandlerFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
-    <Compile Include="web\core\ReponseEngine.cs" />
     <Compile Include="web\core\RequestDeterminer.cs" />
+    <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RoutedCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -78,6 +82,7 @@
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\RouteHandler.cs" />
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

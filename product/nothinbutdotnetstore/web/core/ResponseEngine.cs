@@ -1,6 +1,6 @@
 ﻿namespace nothinbutdotnetstore.web.core
 {
-    public interface ReponseEngine
+    public interface ResponseEngine
     {
         void handle<Item>(Item item);
     }

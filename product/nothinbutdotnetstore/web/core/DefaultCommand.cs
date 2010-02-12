@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace nothinbutdotnetstore.web.core
 {
-    public class DefaultCommand:Command
+    public class DefaultCommand:RoutedCommand
     {
         IEnumerable<Request> requests;
 

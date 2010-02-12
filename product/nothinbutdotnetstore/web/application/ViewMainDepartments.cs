@@ -8,21 +8,21 @@ namespace nothinbutdotnetstore.web.application
     public class ViewMainDepartments : ApplicationCommand
     {
         Repository repository;
-        ReponseEngine reponse_engine;
+        ResponseEngine response_engine;
 
         public ViewMainDepartments():this(new StubRepository(),new StubResponseEngine())
         {
         }
 
-        public ViewMainDepartments(Repository repository, ReponseEngine reponse_engine)
+        public ViewMainDepartments(Repository repository, ResponseEngine response_engine)
         {
             this.repository = repository;
-            this.reponse_engine = reponse_engine;
+            this.response_engine = response_engine;
         }
 
         public void process(Request request)
         {
-            reponse_engine.handle(repository.get_all_main_departments());
+            response_engine.handle(repository.get_all_main_departments());
         }
     }
 }
