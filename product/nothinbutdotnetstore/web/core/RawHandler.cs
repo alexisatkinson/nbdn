@@ -7,11 +7,11 @@ namespace nothinbutdotnetstore.web.core
         FrontController front_controller;
         RequestFactory request_factory;
 
-        public RawHandler() : this(new DefaultFrontController(), new StubRequestFactory())
+        public RawHandler() : this(new DefaultFrontController())
         {
         }
 
-        public RawHandler(FrontController front_controller, RequestFactory request_factory)
+        public RawHandler(FrontController front_controller)
         {
             this.front_controller = front_controller;
             this.request_factory = request_factory;
