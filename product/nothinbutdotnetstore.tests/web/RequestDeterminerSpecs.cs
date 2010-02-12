@@ -25,8 +25,8 @@ namespace nothinbutdotnetstore.tests.web
                 
                 request = an<Request>();
 
-                mappings.Add("\\DummyType.store", typeof(DummyType));
-                request.Stub(x => x.id).Return("\\DummyType.store");
+                mappings.Add("/DummyType.store", typeof(DummyType));
+                request.Stub(x => x.id).Return("/DummyType.store");
 
                 provide_a_basic_sut_constructor_argument(request);
                 provide_a_basic_sut_constructor_argument<IDictionary<string, Type>>(mappings);
