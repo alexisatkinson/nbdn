@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web;
+using nothinbutdotnetstore.domain.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -33,7 +34,7 @@ namespace nothinbutdotnetstore.web.core
     {
         public Request create_from(HttpContext http_context)
         {
-            throw new NotImplementedException();
+            return new DefaultRequest(new StubMapperRegisrty());
         }
     }
 }

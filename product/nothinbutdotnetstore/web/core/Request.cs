@@ -6,6 +6,7 @@ namespace nothinbutdotnetstore.web.core
     public interface Request
     {
         ItemToMap map<ItemToMap>();
+        string id { get; }
     }
 
     public class DefaultRequest : Request
@@ -20,6 +21,11 @@ namespace nothinbutdotnetstore.web.core
         public ItemToMap map<ItemToMap>()
         {
             return mapper_registry.get_mapper_for<Request, ItemToMap>().map_from(this);
+        }
+
+        public string id
+        {
+            get { return "/views/ViewMainDepartments.store"; }
         }
     }
 }

@@ -18,9 +18,9 @@ namespace nothinbutdotnetstore.web.core
 
         static IEnumerable<RoutedCommand> create_basic_set()
         {
-            //yield return (new DefaultRoutedCommand(x => departmentRequest.GetType().Equals(x.GetType()), new ViewMainDepartments()));
-            //yield return (new DefaultRoutedCommand(x => subDepartmentRequest.GetType().Equals(x.GetType()), new ViewSubDepartments()));
-            return null;
+            yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewMainDepartments>(), new ViewMainDepartments()));
+            yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewSubDepartments>(), new ViewSubDepartments()));
+            yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewProducts>(), new ViewProducts()));
         }
 
         static IEnumerable<RoutedCommand> generate_commands()
@@ -38,5 +38,6 @@ namespace nothinbutdotnetstore.web.core
         {
             return commands.FirstOrDefault(x => x.can_handle(request)) ?? new MissingRoutedCommandForRequest();
         }
+
     }
 }

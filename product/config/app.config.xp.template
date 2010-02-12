@@ -21,10 +21,7 @@
     <authentication mode="Windows"/>
     <httpHandlers>      
       <add verb="*"
-           path="*.store"
-           type="nothinbutdotnetstore.web.core.RawHandler, nothinbutdotnetstore" />
-      <add verb="*"
-           path="*.department"
+           path="*.Store"
            type="nothinbutdotnetstore.web.core.RawHandler, nothinbutdotnetstore" />
     </httpHandlers>
    </system.web>
