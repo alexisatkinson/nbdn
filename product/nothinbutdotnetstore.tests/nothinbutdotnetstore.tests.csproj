@@ -73,6 +73,7 @@
     <Compile Include="StringWriter.cs" />
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="utility\ObjectMother.cs" />
+    <Compile Include="utility\ReflectionUtilitySpecs.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\RequestDeterminerSpecs.cs" />
     <Compile Include="web\DepartmentMapperSpec.cs" />

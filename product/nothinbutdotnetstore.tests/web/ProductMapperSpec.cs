@@ -16,12 +16,12 @@ namespace nothinbutdotnetstore.tests.web
         }
 
         [Concern(typeof (ProductMapper))]
-        public class when_observation_name : concern
+        public class when_mapping_from_a_request : concern
         {
             context c = () =>
             {
                 request = an<Request>();
-                request.Stub(x => x.GetValue<string>(RequestParameters.ProductName)).Return(product_name);
+                request.Stub(x => x.get_value<string>(null)).Return(product_name);
             };
 
             because b = () =>
@@ -30,7 +30,7 @@ namespace nothinbutdotnetstore.tests.web
             };
 
 
-            it first_observation = () =>
+            it should_map_and_populate_correctly = () =>
             {
                 result.name.should_be_equal_to(product_name);
             };
@@ -45,7 +45,7 @@ namespace nothinbutdotnetstore.tests.web
     {
         public Product map_from(Request input)
         {
-            return new Product {name = input.GetValue<string>(RequestParameters.ProductName)};
+            throw new NotImplementedException();
         }
     }
 }

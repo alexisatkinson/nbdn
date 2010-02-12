@@ -21,7 +21,7 @@ namespace nothinbutdotnetstore.web.application
             context c = () =>
             {
                 request = an<Request>();
-                request.Stub(x => x.GetValue<string>(RequestParameters.DepartmentName)).Return(department_name);
+                request.Stub(x => x.get_value<string>(null)).Return(department_name);
             };
 
             because b = () =>

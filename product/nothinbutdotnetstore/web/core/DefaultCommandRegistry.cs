@@ -21,6 +21,7 @@ namespace nothinbutdotnetstore.web.core
             yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewMainDepartments>(), new ViewMainDepartments()));
             yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewSubDepartments>(), new ViewSubDepartments()));
             yield return (new DefaultRoutedCommand(x => new DefaultRequestDeterminer(x).Result<ViewProducts>(), new ViewProducts()));
+            yield return (new DefaultRoutedCommand(x => true, new DispatchingCommand()));
         }
 
         static IEnumerable<RoutedCommand> generate_commands()
