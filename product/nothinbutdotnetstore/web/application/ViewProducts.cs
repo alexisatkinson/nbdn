@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using nothinbutdotnetstore.domain;
 using nothinbutdotnetstore.domain.stubs;
 using nothinbutdotnetstore.web.core;
@@ -11,7 +10,7 @@ namespace nothinbutdotnetstore.web.application
         Repository repository;
         ReponseEngine response_engine;
 
-        public ViewProducts():this(new StubRepository(),new StubResponseEngine())
+        public ViewProducts() : this(new StubRepository(), new StubResponseEngine())
         {
         }
 
@@ -23,8 +22,7 @@ namespace nothinbutdotnetstore.web.application
 
         public void process(Request request)
         {
-
-
+            response_engine.handle(repository.get_all_products_in(request.map<Department>()));
         }
     }
 }

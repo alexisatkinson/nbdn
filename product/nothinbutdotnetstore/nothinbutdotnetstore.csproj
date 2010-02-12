@@ -50,8 +50,6 @@
     <Compile Include="web\application\ViewProducts.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
-    <Compile Include="web\core\DefaultRequest.cs" />
-    <Compile Include="web\core\DefaultRequestFactory.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\ReponseEngine.cs" />

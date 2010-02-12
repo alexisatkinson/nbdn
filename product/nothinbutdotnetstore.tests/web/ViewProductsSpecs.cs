@@ -11,7 +11,7 @@ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
  {   
-     public class ViewProductsSpec
+     public class ViewProductsSpecs
      {
          public abstract class concern : observations_for_a_sut_with_a_contract<ApplicationCommand,
                                              ViewProducts>
@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.tests.web
          }
 
          [Concern(typeof(ViewProducts))]
-         public class when_observation_name : concern
+         public class when_run : concern
          {
              context c = () =>
              {
@@ -28,14 +28,11 @@ namespace nothinbutdotnetstore.tests.web
                  repository = the_dependency<Repository>();
                  response_engine = the_dependency<ReponseEngine>();
 
-                 departments = new List<Product>();
+                 department = new Department();
+                 products = new List<Product>();
 
-                 var department = an<SubDepartment>();
-                 int department_id = 1;
-
-                 request.Stub(x => x.item("sub_department_id")).Return((Object)(department_id));
-                 repository.Stub(x => x.get_sub_department(department_id)).Return(department);
-                 //repository.Stub(x => x.get_all_sub_departments_for(department)).Return(departments);
+                 request.Stub(x => x.map<Department>()).Return(department);
+                 repository.Stub(x => x.get_all_products_in(department)).Return(products);
              };
 
              because b = () =>
@@ -43,15 +40,16 @@ namespace nothinbutdotnetstore.tests.web
                  sut.process(request);
              };
 
-             it should_tell_the_response_engine_to_display_the_sub_departments = () =>
+             it should_tell_the_response_engine_to_display_the_products = () =>
              {
-                 response_engine.received(x => x.handle(departments));
+                 response_engine.received(x => x.handle(products));
              };
 
              static Repository repository;
              static Request request;
              static ReponseEngine response_engine;
-             static IEnumerable<Product> departments;
+             static Department department;
+             static IEnumerable<Product> products;
          }
      }
  }

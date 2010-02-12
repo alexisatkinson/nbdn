@@ -11,7 +11,7 @@ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
  {   
-     public class ViewSubDepartmentSpec
+     public class ViewSubDepartmentSpecs
      {
          public abstract class concern : observations_for_a_sut_with_a_contract<ApplicationCommand, ViewSubDepartments>
          {
@@ -27,14 +27,12 @@ namespace nothinbutdotnetstore.tests.web
                  repository = the_dependency<Repository>();
                  response_engine = the_dependency<ReponseEngine>();
 
-                 departments = new List<SubDepartment>();
+                 sub_departments = new List<Department>();
 
-                 var department = an<Department>();
-                 int department_id = 1;
+                 department = an<Department>();
 
-                 request.Stub(x => x.item("department_id")).Return((Object)(department_id));
-                 repository.Stub(x => x.get_main_department(department_id)).Return(department);
-                 repository.Stub(x => x.get_all_sub_departments_for(department)).Return(departments);
+                 request.Stub(x => x.map<Department>()).Return(department);
+                 repository.Stub(x => x.get_all_sub_departments_for(department)).Return(sub_departments);
              };
 
              because b = () =>
@@ -44,13 +42,14 @@ namespace nothinbutdotnetstore.tests.web
 
              it should_tell_the_response_engine_to_display_the_sub_departments = () =>
              {
-                 response_engine.received(x => x.handle(departments));
+                 response_engine.received(x => x.handle(sub_departments));
              };
 
              static Repository repository;
              static Request request;
              static ReponseEngine response_engine;
-             static IEnumerable<SubDepartment> departments;
+             static IEnumerable<Department> sub_departments;
+             static Department department;
          }
      }
  }
