@@ -74,10 +74,13 @@
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
+    <Compile Include="web\HttpHandlerFactorySpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
     <Compile Include="web\RequestSpec.cs" />
+    <Compile Include="web\ResponseEngineSpecs.cs" />
     <Compile Include="web\RoutedCommandSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
+    <Compile Include="web\RouteHandlerSpecs.cs" />
     <Compile Include="web\ViewMainDepartmentsSpecs.cs" />
     <Compile Include="web\ViewProductsSpecs.cs" />
     <Compile Include="web\ViewSubDepartmentSpecs.cs" />

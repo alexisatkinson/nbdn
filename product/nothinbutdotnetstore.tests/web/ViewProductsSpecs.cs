@@ -26,7 +26,7 @@ namespace nothinbutdotnetstore.tests.web
              {
                  request = an<Request>();
                  repository = the_dependency<Repository>();
-                 response_engine = the_dependency<ReponseEngine>();
+                 response_engine = the_dependency<ResponseEngine>();
 
                  department = new Department();
                  products = new List<Product>();
@@ -47,7 +47,7 @@ namespace nothinbutdotnetstore.tests.web
 
              static Repository repository;
              static Request request;
-             static ReponseEngine response_engine;
+             static ResponseEngine response_engine;
              static Department department;
              static IEnumerable<Product> products;
          }

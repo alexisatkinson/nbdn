@@ -8,13 +8,13 @@ namespace nothinbutdotnetstore.web.application
     public class ViewProducts : ApplicationCommand
     {
         Repository repository;
-        ReponseEngine response_engine;
+        ResponseEngine response_engine;
 
         public ViewProducts() : this(new StubRepository(), new StubResponseEngine())
         {
         }
 
-        public ViewProducts(Repository repository, ReponseEngine response_engine)
+        public ViewProducts(Repository repository, ResponseEngine response_engine)
         {
             this.repository = repository;
             this.response_engine = response_engine;
