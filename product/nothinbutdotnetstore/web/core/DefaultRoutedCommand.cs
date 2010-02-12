@@ -2,7 +2,7 @@
 
 namespace nothinbutdotnetstore.web.core
 {
-    public class DefaultRoutedCommand<T> : RoutedCommand
+    public class DefaultRoutedCommand : RoutedCommand
     {
         Predicate<Request> criteria;
         ApplicationCommand application_command;
