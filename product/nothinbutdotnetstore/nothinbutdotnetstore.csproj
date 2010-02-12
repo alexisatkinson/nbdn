@@ -56,6 +56,7 @@
     <Compile Include="domain\Department.cs" />
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\Repository.cs" />
+    <Compile Include="domain\stubs\StubMapperRegisrty.cs" />
     <Compile Include="domain\stubs\StubRepository.cs" />
     <Compile Include="domain\Subdepartment.cs" />
     <Compile Include="utility\Mapper.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\ReponseEngine.cs" />
+    <Compile Include="web\core\RequestDeterminer.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RoutedCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
