@@ -23,6 +23,9 @@
       <add verb="*"
            path="*.store"
            type="nothinbutdotnetstore.web.core.RawHandler, nothinbutdotnetstore" />
+      <add verb="*"
+           path="*.department"
+           type="nothinbutdotnetstore.web.core.RawHandler, nothinbutdotnetstore" />
     </httpHandlers>
    </system.web>
   

@@ -78,6 +78,8 @@
     <Compile Include="web\RoutedCommandSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\ViewMainDepartmentsSpecs.cs" />
+    <Compile Include="web\ViewProductsSpecs.cs" />
+    <Compile Include="web\ViewSubDepartmentSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">
