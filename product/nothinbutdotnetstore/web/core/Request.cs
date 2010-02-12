@@ -7,6 +7,7 @@ namespace nothinbutdotnetstore.web.core
     {
         ItemToMap map<ItemToMap>();
         string id { get; }
+        TypeOfValue GetValue<TypeOfValue>(string keyName);
     }
 
     public class DefaultRequest : Request
@@ -26,6 +27,17 @@ namespace nothinbutdotnetstore.web.core
         public string id
         {
             get { return "/views/ViewMainDepartments.store"; }
+			}
+        public TypeOfValue GetValue<TypeOfValue>(string keyName)
+        {
+            throw new NotImplementedException();
         }
+
+    }
+
+    public class RequestParameters
+    {
+        public const string DepartmentName = "DepartmentName";
+        public const string ProductName = "ProductName";
     }
 }

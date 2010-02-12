@@ -75,6 +75,8 @@
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\RequestDeterminerSpecs.cs" />
+    <Compile Include="web\DepartmentMapperSpec.cs" />
+    <Compile Include="web\ProductMapperSpec.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
     <Compile Include="web\RequestSpec.cs" />
     <Compile Include="web\RoutedCommandSpecs.cs" />

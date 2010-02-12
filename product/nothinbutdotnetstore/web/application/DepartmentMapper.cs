@@ -9,7 +9,7 @@ namespace nothinbutdotnetstore.web.application
     {
         public Department map_from(Request input)
         {
-            throw new NotImplementedException();
+            return new Department { name = input.GetValue<string>(RequestParameters.DepartmentName) };
         }
     }
 }
