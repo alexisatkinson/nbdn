@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdddoc.core;
@@ -21,7 +21,10 @@ namespace nothinbutdotnetstore.tests.web
             context c = () =>
             {
                 request = an<Request>();
-                request.Stub(x => x.get_value<string>(null)).Return(product_name);
+                original = new Product {name = "blah"};
+                payload = new Dictionary<string, object>();
+                payload.Add(ReflectionUtility.get_name_of_property<Product>(x => x.name), original.name);
+                request.Stub(x => x.payload).Return(payload);
             };
 
             because b = () =>
@@ -32,12 +35,13 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_map_and_populate_correctly = () =>
             {
-                result.name.should_be_equal_to(product_name);
+                result.name.should_be_equal_to(original.name);
             };
 
             static Request request;
             static Product result;
-            static string product_name = "Product Name";
+            static Product original;
+            static Dictionary<string, object> payload;
         }
     }
 
@@ -45,7 +49,7 @@ namespace nothinbutdotnetstore.tests.web
     {
         public Product map_from(Request input)
         {
-            throw new NotImplementedException();
+            return new Product {name = input.payload[ReflectionUtility.get_name_of_property<Product>(x => x.name)].ToString()};
         }
     }
 }

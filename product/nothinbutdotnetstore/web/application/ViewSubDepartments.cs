@@ -22,7 +22,7 @@ namespace nothinbutdotnetstore.web.application
 
         public void process(Request request)
         {
-            response_engine.handle(repository.get_all_sub_departments_for(request.map<Department>()));
+            response_engine.display(repository.get_all_sub_departments_for(request.map<Department>()));
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface ResponseEngine
     {
-        void handle<Item>(Item item);
+        void display<Item>(Item item);
     }
 }

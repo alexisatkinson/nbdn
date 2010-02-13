@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using nothinbutdotnetstore.utility;
 
 namespace nothinbutdotnetstore.web.core
@@ -7,7 +8,7 @@ namespace nothinbutdotnetstore.web.core
     {
         ItemToMap map<ItemToMap>();
         string id { get; }
-        TypeOfValue get_value<TypeOfValue>(string keyName);
+        IDictionary<string, object> payload { get; }
     }
 
     public class DefaultRequest : Request
@@ -22,6 +23,11 @@ namespace nothinbutdotnetstore.web.core
         public ItemToMap map<ItemToMap>()
         {
             return mapper_registry.get_mapper_for<Request, ItemToMap>().map_from(this);
+        }
+
+        public IDictionary<string, object> payload
+        {
+            get { throw new NotImplementedException(); }
         }
 
         public string id

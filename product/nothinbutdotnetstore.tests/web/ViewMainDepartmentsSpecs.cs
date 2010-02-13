@@ -44,7 +44,7 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_tell_the_response_engine_to_display_the_departments = () =>
             {
-                response_engine.received(x => x.handle(departments));
+                response_engine.received(x => x.display(departments));
             };
 
             static Repository repository;
