@@ -74,6 +74,7 @@
     <Compile Include="web\core\DefaultViewWithData.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="web\core\DefaultDependencyResolver.cs" />
     <Compile Include="web\core\DispatchingCommand.cs" />
     <Compile Include="web\core\HttpHandlerFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />

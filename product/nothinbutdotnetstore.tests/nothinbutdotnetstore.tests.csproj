@@ -75,6 +75,7 @@
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="utility\ReflectionUtilitySpecs.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
+    <Compile Include="web\DependencyResolverSpec.cs" />
     <Compile Include="web\RequestDeterminerSpecs.cs" />
     <Compile Include="web\DepartmentMapperSpec.cs" />
     <Compile Include="web\ProductMapperSpec.cs" />
