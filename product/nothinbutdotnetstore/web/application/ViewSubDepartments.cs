@@ -1,7 +1,5 @@
 ﻿using nothinbutdotnetstore.domain;
-using nothinbutdotnetstore.domain.stubs;
 using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -10,9 +8,6 @@ namespace nothinbutdotnetstore.web.application
         Repository repository;
         ResponseEngine response_engine;
 
-        public ViewSubDepartments() : this(new StubRepository(), new StubResponseEngine())
-        {
-        }
 
         public ViewSubDepartments(Repository repository, ResponseEngine response_engine)
         {

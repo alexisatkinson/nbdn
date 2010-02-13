@@ -71,6 +71,9 @@
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
     <Compile Include="web\core\DefaultViewRegistry.cs" />
+    <Compile Include="web\core\DefaultViewWithData.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\DispatchingCommand.cs" />
     <Compile Include="web\core\HttpHandlerFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
