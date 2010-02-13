@@ -10,13 +10,13 @@ namespace nothinbutdotnetstore.tests.web
  {   
      public class RouteHandlerSpecs
      {
-         public abstract class concern : observations_for_a_sut_with_a_contract<RouteHandler,
-                                             DefaultRouteHandler>
+         public abstract class concern : observations_for_a_sut_with_a_contract<ViewRegistry,
+                                             DefaultViewRegistry>
          {
         
          }
 
-         [Concern(typeof(DefaultRouteHandler))]
+         [Concern(typeof(DefaultViewRegistry))]
          public class when_asked_for_a_handler_for_a_path_that_doesnt_already_have_a_handler : concern
          {
              context c = () =>
@@ -27,7 +27,7 @@ namespace nothinbutdotnetstore.tests.web
 
              because b = () =>
              {
-                 sut.GetHttpHandler(url);
+                 sut.get_view_for<int>();
              };
 
         
@@ -42,7 +42,7 @@ namespace nothinbutdotnetstore.tests.web
 
          }
 
-         [Concern(typeof(DefaultRouteHandler))]
+         [Concern(typeof(DefaultViewRegistry))]
          public class when_asked_for_a_handler_for_a_path_whereby_we_already_have_a_handler : concern
          {
              context c = () =>
@@ -53,8 +53,8 @@ namespace nothinbutdotnetstore.tests.web
 
              because b = () =>
              {
-                 handler1 = sut.GetHttpHandler(url);
-                 handler2 = sut.GetHttpHandler(url);
+                 handler1 = sut.get_view_for<int>();
+                 handler2 = sut.get_view_for<int>();
              };
 
              it should_return_a_handler = () =>
@@ -68,8 +68,8 @@ namespace nothinbutdotnetstore.tests.web
              };
 
              static HttpHandlerFactory handler_factory;
-             static IHttpHandler handler1;
-             static IHttpHandler handler2;
+             static View handler1;
+             static View handler2;
              static string url;
 
          }

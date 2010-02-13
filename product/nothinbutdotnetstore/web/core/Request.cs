@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using nothinbutdotnetstore.utility;
 
 namespace nothinbutdotnetstore.web.core
@@ -7,7 +8,7 @@ namespace nothinbutdotnetstore.web.core
     {
         ItemToMap map<ItemToMap>();
         string id { get; }
-        TypeOfValue GetValue<TypeOfValue>(string keyName);
+        IDictionary<string, object> payload { get; }
     }
 
     public class DefaultRequest : Request
@@ -24,20 +25,19 @@ namespace nothinbutdotnetstore.web.core
             return mapper_registry.get_mapper_for<Request, ItemToMap>().map_from(this);
         }
 
+        public IDictionary<string, object> payload
+        {
+            get { throw new NotImplementedException(); }
+        }
+
         public string id
         {
             get { return "/views/ViewMainDepartments.store"; }
 			}
-        public TypeOfValue GetValue<TypeOfValue>(string keyName)
+        public TypeOfValue get_value<TypeOfValue>(string keyName)
         {
             throw new NotImplementedException();
         }
 
-    }
-
-    public class RequestParameters
-    {
-        public const string DepartmentName = "DepartmentName";
-        public const string ProductName = "ProductName";
     }
 }

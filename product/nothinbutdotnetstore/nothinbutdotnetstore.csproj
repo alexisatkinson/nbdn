@@ -61,14 +61,20 @@
     <Compile Include="domain\Subdepartment.cs" />
     <Compile Include="utility\Mapper.cs" />
     <Compile Include="utility\MapperRegistry.cs" />
+    <Compile Include="utility\ReflectionUtility.cs" />
     <Compile Include="web\application\DepartmentMapper.cs" />
+    <Compile Include="web\application\DepartmentsController.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\application\ViewProducts.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
-    <Compile Include="web\core\DefaultRouteHandler.cs" />
+    <Compile Include="web\core\DefaultViewRegistry.cs" />
+    <Compile Include="web\core\DefaultViewWithData.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\core\DispatchingCommand.cs" />
     <Compile Include="web\core\HttpHandlerFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestDeterminer.cs" />
@@ -81,8 +87,12 @@
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
-    <Compile Include="web\core\RouteHandler.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
+    <Compile Include="web\core\ViewHandler.cs" />
+    <Compile Include="web\core\ViewRegistry.cs" />
+    <Compile Include="web\core\View.cs" />
+    <Compile Include="web\core\ViewWithData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
