@@ -59,6 +59,19 @@
     <Compile Include="domain\stubs\StubMapperRegisrty.cs" />
     <Compile Include="domain\stubs\StubRepository.cs" />
     <Compile Include="domain\Subdepartment.cs" />
+    <Compile Include="utility\container\AutoWiringResolver.cs" />
+    <Compile Include="utility\container\ConstructorSelectionStrategy.cs" />
+    <Compile Include="utility\container\DefaultDependencyResolver.cs" />
+    <Compile Include="utility\container\DependencyContainer.cs" />
+    <Compile Include="utility\container\DependencyResolver.cs" />
+    <Compile Include="utility\container\FunctionalItemResolver.cs" />
+    <Compile Include="utility\container\GreediestConstructor.cs" />
+    <Compile Include="utility\container\ItemResolutionException.cs" />
+    <Compile Include="utility\container\ItemResolverNotRegisteredException.cs" />
+    <Compile Include="utility\container\SingletonItemResolver.cs" />
+    <Compile Include="utility\Criteria.cs" />
+    <Compile Include="utility\UsefulExtensions.cs" />
+    <Compile Include="utility\ItemResolver.cs" />
     <Compile Include="utility\Mapper.cs" />
     <Compile Include="utility\MapperRegistry.cs" />
     <Compile Include="utility\ReflectionUtility.cs" />
@@ -70,6 +83,7 @@
     <Compile Include="web\application\ViewProducts.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
+    <Compile Include="web\core\AppStartup.cs" />
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutedCommand.cs" />
     <Compile Include="web\core\DefaultViewRegistry.cs" />
@@ -78,7 +92,10 @@
     </Compile>
     <Compile Include="web\core\DispatchingCommand.cs" />
     <Compile Include="web\core\HttpHandlerFactory.cs" />
+    <Compile Include="web\core\Invocation.cs" />
+    <Compile Include="web\core\InvocationInterceptor.cs" />
     <Compile Include="web\core\RawHandler.cs" />
+    <Compile Include="web\core\RegisterAttribute.cs" />
     <Compile Include="web\core\RequestDeterminer.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
@@ -89,6 +106,7 @@
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\SecuredCommand.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\ViewFactory.cs" />
     <Compile Include="web\core\ViewHandler.cs" />
