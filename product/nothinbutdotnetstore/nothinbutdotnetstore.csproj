@@ -87,10 +87,10 @@
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRoutedCommandForRequest.cs" />
     <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\ViewFactory.cs" />
     <Compile Include="web\core\ViewHandler.cs" />
     <Compile Include="web\core\ViewRegistry.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\View.cs" />
     <Compile Include="web\core\ViewWithData.cs" />
   </ItemGroup>

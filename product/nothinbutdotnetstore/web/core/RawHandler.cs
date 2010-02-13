@@ -1,5 +1,5 @@
 ﻿using System.Web;
-using nothinbutdotnetstore.domain.stubs;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -26,14 +26,6 @@ namespace nothinbutdotnetstore.web.core
         public bool IsReusable
         {
             get { return true; }
-        }
-    }
-
-    public class StubRequestFactory : RequestFactory
-    {
-        public Request create_from(HttpContext http_context)
-        {
-            return new DefaultRequest(new StubMapperRegisrty());
         }
     }
 }
