@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using nothinbutdotnetstore.web.application;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -7,7 +9,6 @@ namespace nothinbutdotnetstore.web.core
     {
         IEnumerable<RoutedCommand> commands;
 
-<<<<<<< HEAD
         public DefaultCommandRegistry():this(create_basic_set())
         {
         }
@@ -35,8 +36,6 @@ namespace nothinbutdotnetstore.web.core
         {
             throw new NotImplementedException();
         }
-=======
->>>>>>> f91bffe9902a3438e470f5b51a586135618aa738
 
         public DefaultCommandRegistry(IEnumerable<RoutedCommand> commands)
         {

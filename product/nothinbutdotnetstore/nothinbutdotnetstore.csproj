@@ -64,6 +64,8 @@
     <Compile Include="utility\ReflectionUtility.cs" />
     <Compile Include="web\application\DepartmentMapper.cs" />
     <Compile Include="web\application\DepartmentsController.cs" />
+    <Compile Include="web\application\DefaultDependencyRegister.cs" />
+    <Compile Include="web\application\DependencyRegister.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\application\ViewProducts.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
